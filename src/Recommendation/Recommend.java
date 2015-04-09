@@ -43,11 +43,11 @@ public class Recommend extends Configured implements Tool {
 	      job.setInputFormatClass(TextInputFormat.class);
 	      job.setOutputFormatClass(TextOutputFormat.class);
 	      
-	      String a1="Relationship.txt";
-	      String a2="result";
+	      //String a1="Relationship.txt";
+	      //String a2="result";
 	      
-	      FileInputFormat.addInputPath(job, new Path(a1));
-	      FileOutputFormat.setOutputPath(job, new Path(a2));
+	      FileInputFormat.addInputPath(job, new Path(args[0]));
+	      FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
 	      job.waitForCompletion(true);
 	      
